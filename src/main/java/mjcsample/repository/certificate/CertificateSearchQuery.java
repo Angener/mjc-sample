@@ -51,7 +51,7 @@ public class CertificateSearchQuery {
     private Query buildQueryPrototype(String queryTemplate) {
         Session session = unwrapSession();
 
-        List<String> conditions = Arrays.asList("1=1");
+        List<String> conditions = new ArrayList<>(Arrays.asList("1=1"));
         Map<String, Object> queryParameters = new HashMap<>();
 
         if(parameters.containsKey("description")) {
